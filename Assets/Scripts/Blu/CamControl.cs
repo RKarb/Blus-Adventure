@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class CamControl : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+    public int rotateSpeed = 200;
+
     void Update()
     {
-        
+        if (Input.GetAxis("Mouse X") < 0)
+        {
+            transform.Rotate(0, -rotateSpeed * Time.deltaTime, 0);
+        }
+        if(Input.GetAxis("Mouse X") > 0)
+        {
+            transform.Rotate(0, rotateSpeed * Time.deltaTime, 0);
+        }
     }
 }

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CharControl : MonoBehaviour
 {
-
     public GameObject thePlayer;
     public bool isWalking;
     public float horizontalMove;
     public float verticalMove;
+
 
     void Update()
     {
