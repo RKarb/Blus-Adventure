@@ -7820,6 +7820,7 @@ GameObject:
   - component: {fileID: 1669093467}
   - component: {fileID: 1669093466}
   - component: {fileID: 1669093465}
+  - component: {fileID: 1669093469}
   m_Layer: 0
   m_Name: RotateCam
   m_TagString: Untagged
@@ -7849,7 +7850,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1669093463}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46cc68d1bb2ec1746ba16876acca59fc, type: 3}
   m_Name: 
@@ -7918,6 +7919,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1669093463}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1669093469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669093463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32f4aaac6127d3b48b07a1834f3294a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lerpTime: 0.01
+  xSensitivity: 1
+  ySensitivity: 1
 --- !u!1 &1674262465
 GameObject:
   m_ObjectHideFlags: 0

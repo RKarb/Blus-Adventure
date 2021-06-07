@@ -17,5 +17,13 @@ public class CamControl : MonoBehaviour
         {
             transform.Rotate(0, rotateSpeed * Time.deltaTime, 0);
         }
+        if (Input.GetAxis("Mouse Y") < 0)
+        {
+            transform.Rotate(-rotateSpeed * Time.deltaTime, 0, 0);
+        }
+        if (Input.GetAxis("Mouse Y") > 0)
+        {
+            transform.Rotate(rotateSpeed * Time.deltaTime, 0, 0);
+        }
     }
 }
