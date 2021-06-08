@@ -24,7 +24,7 @@ public class CharControl : MonoBehaviour
         isGrounded = true;
     }
 
-    void Update()
+    private void FixedUpdate()
     {
         if (Input.GetButton("Horizontal") || (Input.GetButton("Vertical")))
         {
@@ -40,6 +40,24 @@ public class CharControl : MonoBehaviour
             thePlayer.GetComponent<Animation>().Play("cat_armature_idle");
             isWalking = false;
         }
+    }
+
+    void Update()
+    {
+        /*if (Input.GetButton("Horizontal") || (Input.GetButton("Vertical")))
+        {
+            thePlayer.GetComponent<Animation>().Play("cat_armature_walk");
+            horizontalMove = Input.GetAxis("Horizontal") * Time.deltaTime * 150;
+            verticalMove = Input.GetAxis("Vertical") * Time.deltaTime * 8;
+            isWalking = true;
+            transform.Rotate(0, horizontalMove, 0);
+            transform.Translate(0, 0, verticalMove);
+        }
+        else
+        {
+            thePlayer.GetComponent<Animation>().Play("cat_armature_idle");
+            isWalking = false;
+        }*/
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
         {
