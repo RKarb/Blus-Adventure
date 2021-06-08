@@ -8,7 +8,21 @@ public class CharControl : MonoBehaviour
     public bool isWalking;
     public float horizontalMove;
     public float verticalMove;
+    public Vector3 jump;
+    public float jumpForce = 2.0f;
+    public bool isGrounded;
+    private Rigidbody rb;
 
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+        jump = new Vector3(0.0f, 200.0f, 0.0f);
+    }
+
+    void OnCollisionStay()
+    {
+        isGrounded = true;
+    }
 
     void Update()
     {
@@ -25,6 +39,12 @@ public class CharControl : MonoBehaviour
         {
             thePlayer.GetComponent<Animation>().Play("cat_armature_idle");
             isWalking = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
+        {
+            rb.AddForce(jump * jumpForce, ForceMode.Acceleration);
+            isGrounded = false;
         }
     }
 }
